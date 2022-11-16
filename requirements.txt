@@ -1,0 +1,4 @@
+aiogram==2.21
+celery==4.1
+python-dotenv
+redis

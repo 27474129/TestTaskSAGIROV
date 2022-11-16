@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/sources/
+  redis:
+    image: redis
+    restart: always
+
+  worker:
+    restart: always
+    build: .
+    command: ["celery", "-A", "celery_", "worker"]
